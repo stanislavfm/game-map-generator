@@ -5,9 +5,6 @@
  * @author Stanislav Chertilin <staschertilin@gmail.com>
  */
 
-require_once 'bootstrap.php';
-
-$app = TogetherNetworks\App::getInstance();
-
-echo $app->getOutput();
-
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';
+});
