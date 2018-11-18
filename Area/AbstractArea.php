@@ -11,7 +11,12 @@ use TogetherNetworks\Unit;
 
 abstract class AbstractArea
 {
-    protected $unit = null;
+    protected $unit;
+
+    public function __construct()
+    {
+        $this->unit = Unit\Factory::createNone();
+    }
 
     /**
      * @param Unit\AbstractUnit $unit
@@ -29,12 +34,12 @@ abstract class AbstractArea
 
     public function destroyUnit(): void
     {
-        $this->unit = null;
+        $this->unit = Unit\Factory::createNone();
     }
 
     public function hasUnit(): bool
     {
-        return !is_null($this->unit);
+        return !$this->unit instanceof Unit\None;
     }
 
     public function getUnit(): Unit\AbstractUnit
