@@ -7,9 +7,9 @@
 
 namespace TogetherNetworks\Unit;
 
-class Human extends AbstractUnit
+class Human implements UnitInterface
 {
-    public function isVulnerable(AbstractUnit $initiator): bool
+    public function isVulnerable(UnitInterface $initiator): bool
     {
         if ($initiator instanceof Equipment) {
             return true;

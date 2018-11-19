@@ -7,9 +7,9 @@
 
 namespace TogetherNetworks\Unit;
 
-class Base extends AbstractUnit
+class Base implements UnitInterface
 {
-    public function isVulnerable(AbstractUnit $initiator): bool
+    public function isVulnerable(UnitInterface $initiator): bool
     {
         return false;
     }

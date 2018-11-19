@@ -66,7 +66,7 @@ class Renderer
         return 'Unknown';
     }
 
-    private function getUnitName(Unit\AbstractUnit $unit)
+    private function getUnitName(Unit\UnitInterface $unit)
     {
         if ($unit instanceof Unit\Aircraft) {
             return 'Aircraft';

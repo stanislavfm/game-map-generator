@@ -19,11 +19,11 @@ abstract class AbstractArea
     }
 
     /**
-     * @param Unit\AbstractUnit $unit
+     * @param Unit\UnitInterface $unit
      * @throws \Exception
      * @return void
      */
-    public function placeUnit(Unit\AbstractUnit $unit): void
+    public function placeUnit(Unit\UnitInterface $unit): void
     {
         if (!$this->isPossibleUnitPlacing($unit)) {
             throw new \Exception(sprintf('You can not place %s at %s.', get_class($unit), __CLASS__));
@@ -42,10 +42,10 @@ abstract class AbstractArea
         return !$this->unit instanceof Unit\None;
     }
 
-    public function getUnit(): Unit\AbstractUnit
+    public function getUnit(): Unit\UnitInterface
     {
         return $this->unit;
     }
 
-    abstract public function isPossibleUnitPlacing(Unit\AbstractUnit $unit): bool;
+    abstract public function isPossibleUnitPlacing(Unit\UnitInterface $unit): bool;
 }

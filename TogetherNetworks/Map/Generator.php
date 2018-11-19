@@ -89,7 +89,7 @@ class Generator
         return Area\Factory::$createMethod();
     }
 
-    private function getRandomUnit(): Unit\AbstractUnit
+    private function getRandomUnit(): Unit\UnitInterface
     {
         $units = [
             'Aircraft',

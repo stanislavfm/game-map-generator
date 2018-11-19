@@ -11,7 +11,7 @@ use TogetherNetworks\Unit;
 
 class Water extends AbstractArea
 {
-    public function isPossibleUnitPlacing(Unit\AbstractUnit $unit): bool
+    public function isPossibleUnitPlacing(Unit\UnitInterface $unit): bool
     {
         if ($unit instanceof Unit\Equipment) {
             return false;

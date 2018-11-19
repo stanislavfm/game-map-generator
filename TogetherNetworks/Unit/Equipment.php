@@ -7,9 +7,9 @@
 
 namespace TogetherNetworks\Unit;
 
-class Equipment extends AbstractUnit
+class Equipment implements UnitInterface
 {
-    public function isVulnerable(AbstractUnit $initiator): bool
+    public function isVulnerable(UnitInterface $initiator): bool
     {
         if ($initiator instanceof Aircraft) {
             return true;

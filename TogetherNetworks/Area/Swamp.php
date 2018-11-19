@@ -11,7 +11,7 @@ use TogetherNetworks\Unit;
 
 class Swamp extends AbstractArea
 {
-    public function isPossibleUnitPlacing(Unit\AbstractUnit $unit): bool
+    public function isPossibleUnitPlacing(Unit\UnitInterface $unit): bool
     {
         if ($unit instanceof Unit\Human) {
             return false;
